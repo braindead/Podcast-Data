@@ -2,7 +2,7 @@ import re
 
 
 def clean(text):
-    text = re.sub("\d:\d+:\d+\.\d S(\d+|\?): ", "", text)
+    text = re.sub("\d:\d+:\d+\.\d [a-zA-Z0-9 ]+: ", "", text)
     text = re.sub("\[.+?\]", "", text)
     text = re.sub("\-", " ", text)
     text = re.sub("\s{2,}", " ", text)
